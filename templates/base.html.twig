@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('./build/app.css') }}">
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+
+            <div id="react-checkout-root"
+                 data-event-id="{{ event.id }}"
+                 data-event-title="{{ event.title }}"
+                 data-event-price="{{ event.formattedPrice }}"
+            ></div>
+
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('./build/app.js') }}"></script>
+        {% endblock %}
+    </body>
+</html>
