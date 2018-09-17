@@ -18,7 +18,7 @@ class MyController extends AbstractController {
             'base.html.twig',
             array('event' => array(
                 'id' => 1,
-                'title' => 'a title',
+                'title' => 'Hello, React and Symfony',
                 'formattedPrice' => 4.99
             ))
         );
