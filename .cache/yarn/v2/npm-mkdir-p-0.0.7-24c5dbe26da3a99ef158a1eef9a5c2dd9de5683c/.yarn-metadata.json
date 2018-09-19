@@ -1,0 +1,46 @@
+{
+  "manifest": {
+    "author": {
+      "name": "pillys",
+      "email": "pillys@163.com",
+      "url": "http://www.calljs.com"
+    },
+    "dependencies": {},
+    "description": "mkdir-p",
+    "devDependencies": {},
+    "keywords": [
+      "mkdir-p",
+      "mkdir",
+      "mkdirp"
+    ],
+    "main": "index.js",
+    "name": "mkdir-p",
+    "repository": {
+      "url": "https://github.com/pillys/mkdir-p",
+      "type": "git"
+    },
+    "version": "0.0.7",
+    "readmeFilename": "README.md",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/pillys/mkdir-p/issues"
+    },
+    "homepage": "https://github.com/pillys/mkdir-p",
+    "scripts": {},
+    "_registry": "npm",
+    "_loc": "/project/.cache/yarn/v2/npm-mkdir-p-0.0.7-24c5dbe26da3a99ef158a1eef9a5c2dd9de5683c/package.json",
+    "readme": "# mkdir-p\n\n  easy used 'mkdir', when dirpath or parent dirpath not exist, it will create the directory automatically.\n\n# install\n\n```js\nnpm install mkdir-p\n```\n\n# usage\n\nSync:\n\n```js\nvar mkdir = require('mkdir-p');\n\nmkdir.sync('/a/b/c/d');\n```\n\nAsync:\n\n```js\nvar mkdir = require('mkdir-p');\n\nmkdir('/a/b/c/d', function(err){\n  if(err){\n    console.log(err);\n  } else {\n    console.log('ok');\n  }\n});\n```\n\n# License\n\n  [MIT](LICENSE)",
+    "licenseText": "The MIT License (MIT)\n\nCopyright (c) 2015 Pillys\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/mkdir-p/-/mkdir-p-0.0.7.tgz#24c5dbe26da3a99ef158a1eef9a5c2dd9de5683c",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/mkdir-p/-/mkdir-p-0.0.7.tgz",
+    "hash": "24c5dbe26da3a99ef158a1eef9a5c2dd9de5683c",
+    "registry": "npm",
+    "packageName": "mkdir-p"
+  },
+  "registry": "npm",
+  "hash": "24c5dbe26da3a99ef158a1eef9a5c2dd9de5683c"
+}

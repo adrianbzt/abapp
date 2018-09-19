@@ -14,13 +14,20 @@ require('../css/app.css');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Checkout from './components/Checkout';
+import AppBar from './components/AppBar';
+
 
 const checkout = document.getElementById('react-checkout-root');
 if (checkout) {
     try {
         ReactDOM.render(
-            <Checkout {...(checkout.dataset)}/>,
+            <AppBar/>,
             checkout
+            // <div>
+            //
+            //     <Checkout {...(checkout.dataset)}/>,
+            //     checkout
+            // </div>
         );
     } catch (error) {
         console.error(error);

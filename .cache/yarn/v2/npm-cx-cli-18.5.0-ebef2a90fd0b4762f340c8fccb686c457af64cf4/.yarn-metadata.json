@@ -1,0 +1,40 @@
+{
+  "manifest": {
+    "name": "cx-cli",
+    "version": "18.5.0",
+    "description": "Command Line Interface tools for CxJS applications",
+    "main": "./bin/index.js",
+    "author": {
+      "name": "Codaxy"
+    },
+    "license": "SEE LICENSE.md",
+    "dependencies": {
+      "chalk": "^2.1.0",
+      "commander": "^2.9.0",
+      "copy-dir": "^0.3.0",
+      "cross-spawn": "^5.0.0"
+    },
+    "engines": {
+      "node": ">=6.0.0"
+    },
+    "bin": {
+      "cx": "index.js"
+    },
+    "_registry": "npm",
+    "_loc": "/project/.cache/yarn/v2/npm-cx-cli-18.5.0-ebef2a90fd0b4762f340c8fccb686c457af64cf4/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# Cx Command Line Interface\n\nThis is a command line tool for the [Cx framework](https://cxjs.io/v/master/docs/intro/about).\nCx requires tools such as babel and webpack, which are plugin-based and require a \nsignificant amount of work to configure properly.\n\nCx CLI helps you quickly set up a new Cx project that contains the basic file structure \nas well as all of the required tools and configuration code for using the framework.\n\n## Usage\n\nInstall the `cx-cli` tool:\n```\nnpm install cx-cli --global\n```\n\n### For a completely new project\n\nTo create a new scaffold project inside the current directory and start it, enter:\n```\ncx create-app my-app\ncd my-app\nnpm start\n```\n\nIf using `yarn` package manager:\n```\ncx create-app my-app --yarn\ncd my-app\nyarn start\n```\n\nThe preferred way to set up new Cx projects is by using the `yarn create` command:\n```\nyarn create cx-app my-app\ncd my-app\nyarn start\n```\nBy using `yarn create`, you are guaranteed to always use the latest version of Cx.\n\n### For a pre-existing project directory\n\nIt is assumed that the project folder already containes the `package.json`.\nIf not, you can initilize one by running the command `npm init`.\n\nUse `scaffold` to create basic app structure:\n```\ncx scaffold [--yarn]\n```\nAppend `--yarn` to use `yarn` package manager to install packages.\n\nAlternatively, use `install` to add packages into an existing project structure:\n```\ncx install [--yarn]\n```\nPlease note that this will add `Cx`, `React`, `Babel` and `Sass` related packages.\n\n\nStart your application using:\n```\ncx start\n```     \n\nMake a production build:\n```\ncx build\n```\n\nSet up a new route folder:\n```\ncx add route route_name\n```\nThis command creates a new folder - `app/routes/route_name` and copies the `index.js`, \n`index.scss` and `controller.js` files from the template.",
+    "licenseText": "This package is a part of the CxJS framework, which is available under\ndifferent licensing options depending on the nature of your project.\n\nFor more information, please refer to https://cxjs.io.\n\n\n\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/cx-cli/-/cx-cli-18.5.0.tgz#ebef2a90fd0b4762f340c8fccb686c457af64cf4",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/cx-cli/-/cx-cli-18.5.0.tgz",
+    "hash": "ebef2a90fd0b4762f340c8fccb686c457af64cf4",
+    "registry": "npm",
+    "packageName": "cx-cli"
+  },
+  "registry": "npm",
+  "hash": "ebef2a90fd0b4762f340c8fccb686c457af64cf4"
+}

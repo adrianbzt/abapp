@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6061d18-438a-43cb-be8c-7f4a6a99e090" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/js/components/AppBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/components/Checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Checkout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/MyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/MyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,24 +80,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="198" />
-          <entry key="twig" value="20" />
+          <entry key="js" value="380" />
+          <entry key="twig" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="198" />
-          <entry key="Twig" value="20" />
+          <entry key="JavaScript" value="380" />
+          <entry key="Twig" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="js" value="1" />
+          <entry key="js" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JavaScript" value="1" />
+          <entry key="JavaScript" value="4" />
         </counts>
       </usages-collector>
     </session>
@@ -119,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+            <state relative-caret-position="210">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -130,7 +130,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/components/Checkout.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -151,12 +151,33 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+            <state relative-caret-position="360">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#407#433#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/components/AppBar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="55" selection-start-line="55" selection-end-line="55" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -171,6 +192,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>state</find>
+      <find>babel</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -179,15 +206,17 @@
       <list>
         <option value="$PROJECT_DIR$/config/routes.yaml" />
         <option value="$PROJECT_DIR$/config/services.yaml" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/templates/default.twig.html.twig" />
         <option value="$PROJECT_DIR$/templates/default.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/ReactComponent.js" />
         <option value="$PROJECT_DIR$/src/Controller/MyController.php" />
         <option value="$PROJECT_DIR$/assets/js/components/Grid.js" />
-        <option value="$PROJECT_DIR$/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/components/Checkout.js" />
+        <option value="$PROJECT_DIR$/assets/js/components/startTheme.js" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/assets/js/components/AppBar.js" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
@@ -312,6 +341,7 @@
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-babel-plugin-transform-react-jsx-source-6.22.0-66ac12153f5cd2d17b3c19268f4bf0197f44ecd6/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-babel-plugin-transform-regenerator-6.26.0-e0703696fbde27f0a3efcacf8b4dca2f7b3a8f2f/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-babel-plugin-transform-strict-mode-6.24.1-d5faf7aa578a65bbe591cf5edae04a0c67020758/package.json" />
+      <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-babel-polyfill-6.26.0-379937abc67d7895970adc621f284cd966cf2153/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-babel-preset-env-1.7.0-dea79fa4ebeb883cd35dab07e260c1c9c04df77a/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-babel-preset-flow-6.23.0-e71218887085ae9a24b5be4169affb599816c49d/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-babel-preset-react-6.24.1-ba69dfaea45fc3ec639b6a4ecea6e17702c91380/package.json" />
@@ -384,6 +414,7 @@
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-color-string-0.3.0-27d46fb67025c5c2fa25993bfbf579e47841b991/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-colormin-1.1.2-ea2f7420a72b96881a38aae59ec124a6f7298133/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-colors-1.1.2-168a4701756b6a7f51a12ce0c97bfa28c084ed63/package.json" />
+      <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-commander-2.18.0-2bf063ddee7c7891176981a2cc798e5754bc6970/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-commondir-1.0.1-ddd800da0c66127393cca5950ea968a3aaf1253b/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-component-emitter-1.2.1-137918d6d78283f7df7a6b7c5a63e140e69425e6/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-compressible-2.0.15-857a9ab0a7e5a07d8d837ed43fe2defff64fe212/package.json" />
@@ -400,6 +431,7 @@
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-cookie-0.3.1-e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-cookie-signature-1.0.6-e303a882b342cc3ee8ca513a79999734dab3ae2c/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-copy-descriptor-0.1.1-676f6eb3c39997c2ee1ac3a924fd6124748f578d/package.json" />
+      <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-copy-dir-0.3.0-deb2dc2fa9c9290ed47c84155a999a6d45f5a358/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-core-js-1.2.7-652294c14651db28fa93bd2d5ff2983a4f08c636/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-core-js-2.5.7-f972608ff0cead68b841a16a932d0b183791814e/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-core-util-is-1.0.2-b5fd54220aa2bc5ab57aab7140c940754503c1a7/package.json" />
@@ -420,6 +452,8 @@
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-csso-2.3.2-ddd52c587033f49e94b71fc55569f252e8ff5f85/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-csstype-2.5.7-bf9235d5872141eccfb2d16d82993c6b149179ff/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-currently-unhandled-0.4.1-988df33feab191ef799a61369dd76c17adf957ea/package.json" />
+      <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-cx-cli-18.5.0-ebef2a90fd0b4762f340c8fccb686c457af64cf4/package.json" />
+      <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-cx-cli-18.5.0-ebef2a90fd0b4762f340c8fccb686c457af64cf4/tpl/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-d-1.0.0-754bb5bfe55451da69a58b94d45f4c5b0462d58f/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-date-now-0.1.4-eaf439fd4d4848ad74e5cc7dbef200672b9e345b/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-debounce-1.2.0-44a540abc0ea9943018dc0eaa95cce87f65cd131/package.json" />
@@ -733,6 +767,7 @@
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-minipass-2.3.4-4768d7605ed6194d6d576169b9e12ef71e9d9957/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-minizlib-1.1.0-11e13658ce46bc3a70a267aac58359d1e0c29ceb/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-mixin-deep-1.3.1-a49e7268dce1a0d9698e45326c5626df3543d0fe/package.json" />
+      <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-mkdir-p-0.0.7-24c5dbe26da3a99ef158a1eef9a5c2dd9de5683c/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-mkdirp-0.5.1-30057438eac6cf7f8c4767f38648d6697d75c903/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-ms-2.0.0-5608aeadfc00be6c2901df5f9861788de0d597c8/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-ms-2.1.1-30a5864eb3ebb0a66f2ebe6d727af06a09d86e0a/package.json" />
@@ -894,6 +929,7 @@
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-reduce-css-calc-1.3.0-747c914e049614a4c9cfbba629871ad1d2927716/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-reduce-function-call-1.0.2-5a200bf92e0e37751752fe45b0ab330fd4b6be99/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-regenerate-1.4.0-4a856ec4b56e4077c557589cae85e7a4c8869a11/package.json" />
+      <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-regenerator-runtime-0.10.5-336c3efc1220adcedda2c9fab67b5a7955a33658/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-regenerator-runtime-0.11.1-be05ad7f9bf7d22e056f9726cee5017fbf19e2e9/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-regenerator-runtime-0.12.1-fa1a71544764c036f8c49b13a08b2594c9f8a0de/package.json" />
       <path value="$PROJECT_DIR$/.cache/yarn/v2/npm-regenerator-transform-0.10.1-1e4996837231da8b7f3cf4114d71b5691a0680dd/package.json" />
@@ -1353,12 +1389,12 @@
       <workItem from="1536407170104" duration="454000" />
       <workItem from="1536864676901" duration="638000" />
       <workItem from="1537203014447" duration="5433000" />
-      <workItem from="1537363436726" duration="1129000" />
+      <workItem from="1537363436726" duration="3567000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8037000" />
+    <option name="totallyTimeSpent" value="10475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="47" y="25" width="1873" height="1055" extended-state="6" />
@@ -1417,13 +1453,6 @@
         <state relative-caret-position="-362" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/default.html.twig" />
     <entry file="file://$PROJECT_DIR$/assets/js/ReactComponent.js" />
     <entry file="file://$PROJECT_DIR$/public/index.php">
@@ -1459,6 +1488,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/Checkout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/components/startTheme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/app.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1468,8 +1521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+        <state relative-caret-position="360">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#407#433#0" expanded="true" />
@@ -1477,17 +1530,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+    <entry file="file://$PROJECT_DIR$/assets/js/components/AppBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        <state relative-caret-position="445">
+          <caret line="55" selection-start-line="55" selection-end-line="55" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/components/Checkout.js">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="88" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
+        <state relative-caret-position="345">
+          <caret line="24" column="66" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
         </state>
       </provider>
     </entry>
