@@ -13,15 +13,17 @@ require('../css/app.css');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Checkout from './components/Checkout';
-import AppBar from './components/AppBar';
+import Grid from './components/Grid';
+import MainPage from './components/MainPage';
 
 
 const checkout = document.getElementById('react-checkout-root');
 if (checkout) {
     try {
         ReactDOM.render(
-            <AppBar/>,
+            <div>
+            <MainPage/>
+            </div>,
             checkout
             // <div>
             //
