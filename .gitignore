@@ -4,8 +4,8 @@
 /public/bundles/
 /var/
 /vendor/
-###/.cache/###
-###/.idea/###
+/.cache/
+/.idea/
 ###< symfony/framework-bundle ###
 
 ###> symfony/web-server-bundle ###
