@@ -4,6 +4,11 @@ class Checkout extends React.Component {
         super(props);
     }
 
+    clickMe() {
+        document.body.style.backgroundColor = "#"+((1<<24)*Math.random()|0).toString(16);
+        console.log('you clicked me');
+    }
+
     render() {
         return (
             <div>
@@ -12,9 +17,11 @@ class Checkout extends React.Component {
                     #{this.props.eventId}: {this.props.eventTitle} ?
                 </p>
                 <p>Price: {this.props.eventPrice}</p>
-                <button>Book this !</button>
+                <button onClick={() => this.clickMe()}>Book this !</button>
             </div>
         );
     }
+
+
 }
 export default Checkout;

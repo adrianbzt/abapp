@@ -14,6 +14,7 @@ require('../css/app.css');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Checkout from './components/Checkout';
+
 const checkout = document.getElementById('react-checkout-root');
 if (checkout) {
     try {
@@ -26,4 +27,4 @@ if (checkout) {
     }
 }
 
-console.log('Hello Webpack Encore! Hello, React! Edit me in assets/js/app.js');
+console.log('Hello Webpack Encore! Hello, React! Edit me in assets/js/app.js again');

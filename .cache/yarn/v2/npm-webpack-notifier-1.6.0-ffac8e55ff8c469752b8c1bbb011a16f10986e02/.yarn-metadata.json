@@ -1,0 +1,55 @@
+{
+  "manifest": {
+    "name": "webpack-notifier",
+    "version": "1.6.0",
+    "description": "webpack + node-notifier = build status system notifications",
+    "main": "index.js",
+    "files": [
+      "index.js",
+      "logo.png"
+    ],
+    "scripts": {
+      "test": "eslint index.js"
+    },
+    "keywords": [
+      "webpack",
+      "notify",
+      "notification",
+      "node-notifier",
+      "notifier",
+      "build"
+    ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/Turbo87/webpack-notifier.git"
+    },
+    "author": {
+      "name": "Tobias Bieniek",
+      "email": "tobias.bieniek@gmx.de"
+    },
+    "license": "ISC",
+    "dependencies": {
+      "node-notifier": "^5.1.2",
+      "object-assign": "^4.1.0",
+      "strip-ansi": "^3.0.1"
+    },
+    "devDependencies": {
+      "eslint": "^3.3.1"
+    },
+    "_registry": "npm",
+    "_loc": "/project/.cache/yarn/v2/npm-webpack-notifier-1.6.0-ffac8e55ff8c469752b8c1bbb011a16f10986e02/package.json",
+    "readmeFilename": "README.md",
+    "readme": "# webpack-notifier\n\n[![Build Status](https://img.shields.io/travis/Turbo87/webpack-notifier.svg)](https://travis-ci.org/Turbo87/webpack-notifier)\n[![npm Version](https://img.shields.io/npm/v/webpack-notifier.svg)](https://www.npmjs.com/package/webpack-notifier)\n\nThis is a [webpack](http://webpack.github.io/) plugin that uses the\n[node-notifier](https://github.com/mikaelbr/node-notifier) package to\ndisplay build status system notifications to the user.\n\n![webpack-notifier screenshot](screenshot.png)\n\n> This is a fork of the\n[webpack-error-notification](https://github.com/vsolovyov/webpack-error-notification)\nplugin. It adds support for Windows and there is no need to manually install\nthe `terminal-notifier` package on OS X anymore.\n\nThe plugin will notify you about the first run (success/fail),\nall failed runs and the first successful run after recovering from\na build failure. In other words: it will stay silent if everything\nis fine with your build.\n\n\n## Installation\n\nUse `npm` to install this package:\n\n    npm install --save-dev webpack-notifier\n\nCheck the `node-notifier`\n[Requirements](https://github.com/mikaelbr/node-notifier#requirements)\nwhether you need to install any additional tools for your OS.\n\n\n## Usage\n\nIn the `webpack.config.js` file:\n\n```js\nvar WebpackNotifierPlugin = require('webpack-notifier');\n\nvar config = module.exports = {\n  // ...\n\n  plugins: [\n    new WebpackNotifierPlugin(),\n  ]\n},\n```\n\n\n## Configuration\n\n### Title\n\nTitle shown in the notification.\n\n```js\nnew WebpackNotifierPlugin({title: 'Webpack'});\n```\n\n### Content Image\n\nImage shown in the notification.\n\n```js\nvar path = require('path');\n\nnew WebpackNotifierPlugin({contentImage: path.join(__dirname, 'logo.png')});\n```\n\n### Exclude Warnings\n\nIf set to `true`, warnings will not cause a notification.\n\n```js\nnew WebpackNotifierPlugin({excludeWarnings: true});\n```\n\n### Always Notify\n\nTrigger a notification every time.  Call it \"noisy-mode\".\n\n```js\nnew WebpackNotifierPlugin({alwaysNotify: true});\n```\n\n### Skip Notification on the First Build\n\nDo not notify on the first build.  This allows you to receive notifications on subsequent incremental builds without being notified on the initial build.\n\n```js\nnew WebpackNotifierPlugin({skipFirstNotification: true});\n```\n",
+    "licenseText": "Copyright (c) 2014, Vsevolod Solovyov <vsevolod.solovyov@gmail.com>  \nCopyright (c) 2015, Tobias Bieniek <tobias.bieniek@gmx.de>\n\nPermission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/webpack-notifier/-/webpack-notifier-1.6.0.tgz#ffac8e55ff8c469752b8c1bbb011a16f10986e02",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/webpack-notifier/-/webpack-notifier-1.6.0.tgz",
+    "hash": "ffac8e55ff8c469752b8c1bbb011a16f10986e02",
+    "registry": "npm"
+  },
+  "registry": "npm",
+  "hash": "ffac8e55ff8c469752b8c1bbb011a16f10986e02"
+}

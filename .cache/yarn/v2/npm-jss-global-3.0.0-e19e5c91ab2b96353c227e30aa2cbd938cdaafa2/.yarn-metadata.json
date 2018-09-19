@@ -1,0 +1,107 @@
+{
+  "manifest": {
+    "name": "jss-global",
+    "version": "3.0.0",
+    "description": "Global styles for JSS",
+    "main": "lib/index.js",
+    "scripts": {
+      "all": "npm run lint && npm run test && npm run build",
+      "build": "npm run clean && npm run build:lib && npm run build:tests && npm run build:dist",
+      "build:lib": "babel src --out-dir lib",
+      "build:tests": "npm run build:tests:lib && npm run build:tests:local",
+      "build:tests:lib": "cross-env NODE_ENV=test babel src --out-dir tests",
+      "build:tests:local": "cross-env NODE_ENV=test webpack src/index.test.js tmp/tests.js",
+      "build:dist": "npm run build:dist:max && npm run build:dist:min",
+      "build:dist:max": "cross-env NODE_ENV=development webpack src/index.js dist/jss-global.js",
+      "build:dist:min": "cross-env NODE_ENV=production webpack src/index.js dist/jss-global.min.js",
+      "clean": "rimraf {lib,dist,tests,tmp}/*",
+      "lint": "eslint ./src",
+      "lint:staged": "lint-staged",
+      "test": "cross-env NODE_ENV=test karma start --single-run ",
+      "test:watch": "cross-env NODE_ENV=test karma start",
+      "prepublishOnly": "npm run all"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/cssinjs/jss-global.git"
+    },
+    "keywords": [
+      "cssinjs",
+      "css-in-js",
+      "css in js",
+      "jss",
+      "plugin",
+      "global",
+      "unscoped"
+    ],
+    "author": {
+      "name": "Oleg Slobodskoi",
+      "email": "oleg008@gmail.com"
+    },
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/cssinjs/jss/issues/new?title=[jss-global]"
+    },
+    "homepage": "https://github.com/cssinjs/jss-global",
+    "peerDependencies": {
+      "jss": "^9.0.0"
+    },
+    "devDependencies": {
+      "babel-cli": "^6.10.1",
+      "babel-core": "^6.9.1",
+      "babel-eslint": "^7.0.0",
+      "babel-loader": "^6.2.5",
+      "babel-plugin-transform-es3-member-expression-literals": "^6.8.0",
+      "babel-plugin-transform-es3-property-literals": "^6.8.0",
+      "babel-preset-es2015": "^6.9.0",
+      "babel-preset-react": "^6.5.0",
+      "babel-preset-stage-0": "^6.5.0",
+      "cross-env": "^3.0.0",
+      "es5-shim": "^4.5.9",
+      "eslint": "^3.6.0",
+      "eslint-config-airbnb": "^12.0.0",
+      "eslint-config-jss": "^2.3.0",
+      "eslint-plugin-import": "^2.0.0",
+      "eslint-plugin-jsx-a11y": "^2.2.2",
+      "eslint-plugin-react": "^6.3.0",
+      "expect.js": "^0.3.1",
+      "jss": "^9.0.0",
+      "jss-nested": "^6.0.0",
+      "karma": "^1.3.0",
+      "karma-chrome-launcher": "^2.0.0",
+      "karma-coverage": "^1.1.1",
+      "karma-mocha": "^1.1.1",
+      "karma-mocha-reporter": "^2.2.0",
+      "karma-sourcemap-loader": "^0.3.7",
+      "karma-webpack": "^1.8.0",
+      "lint-staged": "^3.0.3",
+      "mocha": "^3.0.2",
+      "pre-commit": "^1.1.3",
+      "rimraf": "^2.5.4",
+      "webpack": "^1.13.1"
+    },
+    "lint-staged": {
+      "./src/*.js": [
+        "eslint",
+        "git add"
+      ]
+    },
+    "pre-commit": "lint:staged",
+    "_registry": "npm",
+    "_loc": "/project/.cache/yarn/v2/npm-jss-global-3.0.0-e19e5c91ab2b96353c227e30aa2cbd938cdaafa2/package.json",
+    "readmeFilename": "readme.md",
+    "readme": "# Global Styles for JSS\n\nIf you want to write regular globally scoped CSS with JSS, this plugin is for you. Don't use it if you can avoid it.\n\n[![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/cssinjs/lobby)\n\n## Top level global declarations block\n\n```javascript\nconst styles = {\n  '@global': {\n    body: {\n      color: 'green'\n    },\n    a: {\n      textDecoration: 'underline'\n    }\n  }\n}\n```\n\n## Top level global prefix\n\n```javascript\nconst styles = {\n  '@global body': {\n    color: 'green'\n  }\n}\n```\n\n## Nested global declarations block\n\n```javascript\nconst styles = {\n  button: {\n    float: 'left',\n    '@global': {\n      span: {color: 'red'}\n    }\n  }\n}\n```\n\n## Nested global prefix\n\n```javascript\nconst styles = {\n  button: {\n    float: 'left',\n    '@global span': {color: 'red'}\n  }\n}\n```\n\n## Issues\n\nFile a bug against [cssinjs/jss prefixed with \\[jss-global\\]](https://github.com/cssinjs/jss/issues/new?title=[jss-global]%20).\n\n## Run tests\n\n```bash\nnpm i\nnpm run test\n```\n\n## License\n\nMIT\n",
+    "licenseText": "The MIT License (MIT)\nCopyright (c) 2016 - present Oleg Slobodskoi\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n"
+  },
+  "artifacts": [],
+  "remote": {
+    "resolved": "https://registry.yarnpkg.com/jss-global/-/jss-global-3.0.0.tgz#e19e5c91ab2b96353c227e30aa2cbd938cdaafa2",
+    "type": "tarball",
+    "reference": "https://registry.yarnpkg.com/jss-global/-/jss-global-3.0.0.tgz",
+    "hash": "e19e5c91ab2b96353c227e30aa2cbd938cdaafa2",
+    "registry": "npm",
+    "packageName": "jss-global"
+  },
+  "registry": "npm",
+  "hash": "e19e5c91ab2b96353c227e30aa2cbd938cdaafa2"
+}
