@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
+import {withStyles} from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -12,23 +12,21 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import { mailFolderListItems, otherMailFolderListItems } from './tileData';
-// import AccountCircle from "@material-ui/core/SvgIcon/SvgIcon";
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import Menu from "@material-ui/core/Menu/Menu";
-import MenuItem from "@material-ui/core/MenuItem/MenuItem";
-
+import {mailFolderListItems, otherMailFolderListItems} from './tileData';
+import Checkout from './Checkout';
+import UserIcon from './UserIcon';
 
 const drawerWidth = 240;
 
 const styles = theme => ({
     root: {
         flexGrow: 1,
-        height: 600,
+        height: 940,
         zIndex: 1,
         overflow: 'hidden',
         position: 'relative',
         display: 'flex',
+        alignContent: 'flex-end'
     },
     appBar: {
         zIndex: theme.zIndex.drawer + 1,
@@ -76,7 +74,7 @@ const styles = theme => ({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'flex-end',
-        padding: '0 8px',
+        padding: '0 10px',
         ...theme.mixins.toolbar,
     },
     content: {
@@ -84,41 +82,32 @@ const styles = theme => ({
         backgroundColor: theme.palette.background.default,
         padding: theme.spacing.unit * 3,
     },
+    upperBar: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+
+    }
 
 });
 
 class MiniDrawer extends React.Component {
     state = {
         open: false,
-        open2: false,
-        auth: true,
-        anchorEl: null
-
     };
 
     handleDrawerOpen = () => {
-        this.setState({ open: true });
+        this.setState({open: true});
     };
 
     handleDrawerClose = () => {
-        this.setState({ open: false });
+        this.setState({open: false});
     };
 
-    handleChange = event => {
-        this.setState({ auth: event.target.checked });
-    };
-
-    handleAnchorMenu = event => {
-        this.setState({ anchorEl: event.currentTarget });
-    };
-
-    handleAnchorClose = () => {
-        this.setState({ anchorEl: null });
-    }
 
     render() {
-        const { classes, theme } = this.props;
-        const { open, open2, auth, anchorEl } = this.state;
+        const {classes, theme} = this.props;
+        const {open} = this.state;
 
         return (
             <div className={classes.root}>
@@ -126,71 +115,62 @@ class MiniDrawer extends React.Component {
                     position="absolute"
                     className={classNames(classes.appBar, this.state.open && classes.appBarShift)}
                 >
-                    <Toolbar disableGutters={!this.state.open}>
-                        <IconButton
-                            color="inherit"
-                            aria-label="Open drawer"
-                            onClick={this.handleDrawerOpen}
-                            className={classNames(classes.menuButton, this.state.open && classes.hide)}
-                        >
-                            <MenuIcon />
-                        </IconButton>
-                        <Typography variant="title" color="inherit" noWrap>
-                            Tool-ul nostru jmeker
-                        </Typography>
+                    <Toolbar
+                        disableGutters={!this.state.open}
+                        className={classNames(classes.upperBar)}>
+                    <IconButton
+                        color="inherit"
+                        aria-label="Open drawer"
+                        onClick={this.handleDrawerOpen}
+                        className={classNames(classes.menuButton, this.state.open && classes.hide)}
+                    >
+                        <MenuIcon/>
+                    </IconButton>
+                    <Typography variant="title" color="inherit" noWrap>
+                        Tool-ul nostru jmeker
+                    </Typography>
 
-                        <div>
-                            <IconButton
-                                aria-owns={open ? 'menu-appbar' : null}
-                                aria-haspopup="true"
-                                onClick={this.handleAnchorMenu}
-                                color="inherit"
-                            >
-                                <AccountCircle />
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorEl}
-                                anchorOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'right',
-                                }}
-                                open={open2}
-                                onClose={this.handleAnchorClose}
-                            >
-                                <MenuItem onClick={this.handleAnchorClose}>Profile</MenuItem>
-                                <MenuItem onClick={this.handleAnchorClose}>My account</MenuItem>
-                            </Menu>
-                        </div>
-                    </Toolbar>
-                </AppBar>
-                <Drawer
-                    variant="permanent"
-                    classes={{
-                        paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
-                    }}
-                    open={this.state.open}
-                >
-                    <div className={classes.toolbar}>
-                        <IconButton onClick={this.handleDrawerClose}>
-                            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-                        </IconButton>
-                    </div>
-                    <Divider />
-                    <List>{mailFolderListItems}</List>
-                    <Divider />
-                    <List>{otherMailFolderListItems}</List>
-                </Drawer>
-                <main className={classes.content}>
-                    <div className={classes.toolbar} />
-                    <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
-                </main>
-            </div>
-        );
+                    <UserIcon/>
+                </Toolbar>
+
+            </AppBar>
+            < Drawer
+        variant = "permanent"
+        classes = {
+        {
+            paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
+        }
+    }
+        open = {this.state.open
+    }
+    >
+    <
+        div
+        className = {classes.toolbar
+    }>
+    <
+        IconButton
+        onClick = {this.handleDrawerClose
+    }>
+        {
+            theme.direction === 'rtl' ? <ChevronRightIcon/> : <ChevronLeftIcon/>
+        }
+    </IconButton>
+    <
+        /div>
+        <Divider/>
+        < List > {mailFolderListItems}
+    </List>
+
+    <
+        /Drawer>
+        <main className={classes.content}>
+            <div className={classes.toolbar}/>
+            <Checkout/>
+        </main>
+        < /div>
+    )
+        ;
     }
 }
 
@@ -199,4 +179,4 @@ MiniDrawer.propTypes = {
     theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(MiniDrawer);
+export default withStyles(styles, {withTheme: true})(MiniDrawer);

@@ -36,4 +36,4 @@ if (checkout) {
     }
 }
 
-console.log('Hello Webpack Encore! Hello, React! Edit me in assets/js/app.js again');
+console.log('Hello Webpack Encore! Hello, React! Edit me in assets/js/app.js');

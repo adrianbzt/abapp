@@ -1,27 +1,37 @@
 import React from 'react';
+import Typography from "@material-ui/core/Typography/Typography";
+import ButtonJmeker from './ButtonJmeker';
+
 class Checkout extends React.Component {
     constructor(props) {
         super(props);
     }
 
     clickMe() {
-        document.body.style.backgroundColor = "#"+((1<<24)*Math.random()|0).toString(16);
+        document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
         console.log('you clicked me');
     }
 
     render() {
         return (
             <div>
-                <p>
-                    You want to book our event
+                <Typography noWrap>
+                    You think water moves fast? You should see ice.
                     #{this.props.eventId}: {this.props.eventTitle} ?
-                </p>
-                <p>Price: {this.props.eventPrice}</p>
-                <button onClick={() => this.clickMe()}>Book this !</button>
+
+
+
+
+                </Typography>
+
+                <Typography>Price: {this.props.eventPrice}</Typography>
+
+                <ButtonJmeker />
+
             </div>
-        );
+    );
     }
 
 
-}
-export default Checkout;
+    }
+    export default Checkout;

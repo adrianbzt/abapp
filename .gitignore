@@ -6,6 +6,7 @@
 /vendor/
 /.cache/
 /.idea/
+/.npm/
 ###< symfony/framework-bundle ###
 
 ###> symfony/web-server-bundle ###

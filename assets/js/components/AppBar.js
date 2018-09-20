@@ -70,7 +70,7 @@ class MenuAppBar extends React.Component {
                             <MenuIcon />
                         </IconButton>
                         <Typography variant="title" color="inherit" className={classes.grow}>
-                            Tool-ul nostru jmeker
+                            Photos
                         </Typography>
                         {auth && (
                             <div>
