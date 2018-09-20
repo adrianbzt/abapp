@@ -49,7 +49,7 @@ class MyController extends AbstractController {
      */
     public function Kpi()
     {   $response = new Response(
-            (new Kpis)->getKpi("https://fbstat.mdc.gameloft.org/Odd/Api/Aria/gmd_beta.php?game=1036&kpi=2&zoom=daily&ua_options=&chart=table&platform=0&group_option=&start_date=2018-07-17&end_date=2018-07-30&country=&action=get_kpi_data")
+            (new Kpis)->getKpi("")
         );
         $response->headers->set('Content-Type', 'application/json');
         return $response;
