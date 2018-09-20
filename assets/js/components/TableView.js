@@ -175,8 +175,10 @@ class CustomPaginationActionsTable extends React.Component {
 
         return (
             <Paper className={classes.root}>
+                <GeoChart data={(rows.length) > 0 ? this.makeMeCrazy() : []}/>
+                
                 <div className={classes.tableWrapper}>
-                    <GeoChart data={(rows.length) > 0 ? this.makeMeCrazy() : []}/>
+
                     <Table className={classes.table}>
 
                         {rows.map((row, rowNb) => {

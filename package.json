@@ -10,10 +10,12 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
+    "jquery-ui": "^1.12.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
     "react-chartkick": "^0.3.0",
     "react-dom": "^16.5.1",
+    "react-gridstack": "^0.1.4",
     "redux": "^4.0.0"
   }
 }
