@@ -16,12 +16,14 @@ import {mailFolderListItems, otherMailFolderListItems} from './tileData';
 import Checkout from './Checkout';
 import UserIcon from './UserIcon';
 
+import PaperEmpty from './PaperEmpty';
+import PaperTable from './PaperTable';
+
 const drawerWidth = 240;
 
 const styles = theme => ({
     root: {
         flexGrow: 1,
-        height: 940,
         zIndex: 1,
         overflow: 'hidden',
         position: 'relative',
@@ -72,8 +74,8 @@ const styles = theme => ({
     },
     toolbar: {
         display: 'flex',
-        alignItems: 'center',
         justifyContent: 'flex-end',
+        alignItems: 'center',
         padding: '0 10px',
         ...theme.mixins.toolbar,
     },
@@ -87,8 +89,7 @@ const styles = theme => ({
         justifyContent: 'space-between',
         alignItems: 'center',
 
-    }
-
+    },
 });
 
 class MiniDrawer extends React.Component {
@@ -118,59 +119,60 @@ class MiniDrawer extends React.Component {
                     <Toolbar
                         disableGutters={!this.state.open}
                         className={classNames(classes.upperBar)}>
-                    <IconButton
-                        color="inherit"
-                        aria-label="Open drawer"
-                        onClick={this.handleDrawerOpen}
-                        className={classNames(classes.menuButton, this.state.open && classes.hide)}
-                    >
-                        <MenuIcon/>
-                    </IconButton>
-                    <Typography variant="title" color="inherit" noWrap>
-                        Tool-ul nostru jmeker
-                    </Typography>
+                        <IconButton
+                            color="inherit"
+                            aria-label="Open drawer"
+                            onClick={this.handleDrawerOpen}
+                            className={classNames(classes.menuButton, this.state.open && classes.hide)}
+                        >
+                            <MenuIcon/>
+                        </IconButton>
+                        <Typography variant="title" color="inherit" noWrap>
+                            Tool-ul nostru jmeker
+                        </Typography>
 
-                    <UserIcon/>
-                </Toolbar>
+                        <UserIcon/>
+                    </Toolbar>
 
-            </AppBar>
-            < Drawer
-        variant = "permanent"
-        classes = {
-        {
-            paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
-        }
-    }
-        open = {this.state.open
-    }
-    >
-    <
-        div
-        className = {classes.toolbar
-    }>
-    <
-        IconButton
-        onClick = {this.handleDrawerClose
-    }>
-        {
-            theme.direction === 'rtl' ? <ChevronRightIcon/> : <ChevronLeftIcon/>
-        }
-    </IconButton>
-    <
-        /div>
-        <Divider/>
-        < List > {mailFolderListItems}
-    </List>
+                </AppBar>
+                < Drawer
+                    variant="permanent"
+                    classes={
+                        {
+                            paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),
+                        }
+                    }
+                    open={this.state.open
+                    }
+                >
+                    <
+                        div
+                        className={classes.toolbar
+                        }>
+                        <
+                            IconButton
+                            onClick={this.handleDrawerClose
+                            }>
+                            {
+                                theme.direction === 'rtl' ? <ChevronRightIcon/> : <ChevronLeftIcon/>
+                            }
+                        </IconButton>
+                    </div>
+                    <Divider/>
+                    < List> {mailFolderListItems}
+                    </List>
 
-    <
-        /Drawer>
-        <main className={classes.content}>
-            <div className={classes.toolbar}/>
-            <Checkout/>
-        </main>
-        < /div>
-    )
-        ;
+                </Drawer>
+                <main className={classes.content}>
+                    <div className={classes.toolbar}/>
+                    <Checkout/>
+                    <PaperEmpty/>
+                    <PaperTable/>
+
+                </main>
+            </div>
+        )
+            ;
     }
 }
 

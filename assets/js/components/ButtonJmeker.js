@@ -25,7 +25,6 @@ function ContainedButtons(props) {
 
 function clickMe() {
     document.body.style.backgroundColor = "#" + ((1 << 24) * Math.random() | 0).toString(16);
-    console.log('you clicked me');
 }
 
 ContainedButtons.propTypes = {
