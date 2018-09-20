@@ -109,29 +109,20 @@ const styles = theme => ({
     },
     table: {
         minWidth: 500,
+
     },
     tableWrapper: {
         overflowX: 'auto',
+        overflowY: 'auto',
+        maxHeight: 500
     },
 });
 
 class CustomPaginationActionsTable extends React.Component {
     state = {
         rows: [
-            // createData('Cupcake', 305, 3.7),
-            // createData('Donut', 452, 25.0),
-            // createData('Eclair', 262, 16.0),
-            // createData('Frozen yoghurt', 159, 6.0),
-            // createData('Gingerbread', 356, 16.0),
-            // createData('Honeycomb', 408, 3.2),
-            // createData('Ice cream sandwich', 237, 9.0),
-            // createData('Jelly Bean', 375, 0.0),
-            // createData('KitKat', 518, 26.0),
-            // createData('Lollipop', 392, 0.2),
-            // createData('Marshmallow', 318, 0),
-            // createData('Nougat', 360, 19.0),
-            // createData('Oreo', 437, 18.0),
-        ].sort((a, b) => (a.calories < b.calories ? -1 : 1)),
+
+        ],
         page: 0,
         rowsPerPage: 10,
     };
@@ -171,6 +162,7 @@ class CustomPaginationActionsTable extends React.Component {
         const {rows, rowsPerPage, page} = this.state;
         const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
+        console.log(rows);
 
         return (
             <Paper className={classes.root}>
@@ -191,28 +183,30 @@ class CustomPaginationActionsTable extends React.Component {
                                         </TableRow>
                                     </TableHead>
                                 )
-                            }
-                            /* else {
-                                                            return (
-                                                                <TableBody>
-                                                                    {row.map((rowEntry, key) => {
-                                                                        return (
-                                                                            <TableRow key={key}>
-                                                                                <TableCell component="th" scope="row">
-                                                                                    {row}
-                                                                                </TableCell>
-                                                                            </TableRow>
-                                                                        );
-                                                                    })}
-                                                                    {emptyRows > 0 && (
-                                                                        <TableRow style={{height: 48 * emptyRows}}>
-                                                                            <TableCell colSpan={6}/>
-                                                                        </TableRow>
-                                                                    )}
-                                                                </TableBody>
-                                                            )
+                            } else {
 
-                                                        }*/
+                                return (
+                                    <TableBody key={"tableBody" + rowNb}>
+                                        <TableRow key={'row-' + rowNb}>
+                                            {row.map((rowEntry, key) => {
+                                                return (
+
+                                                    <TableCell component="th" scope="row" key={rowNb + '-arow-' + key}>
+                                                        {rowEntry}
+                                                    </TableCell>
+
+                                                );
+                                            })}
+                                        </TableRow>
+                                        {emptyRows > 0 && (
+                                            <TableRow style={{height: 48 * emptyRows}}>
+                                                <TableCell colSpan={6}/>
+                                            </TableRow>
+                                        )}
+                                    </TableBody>
+                                )
+
+                            }
                         })}
 
                         <TableFooter>
