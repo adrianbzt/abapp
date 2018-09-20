@@ -23,6 +23,7 @@ class getData
 {
     public function __invoke($payload)
     {
+        Unirest\Request::verifyPeer(false);
         return Unirest\Request::get($payload);
     }
 }
@@ -31,7 +32,7 @@ class decodeJson
 {
     public function __invoke($payload)
     {
-        return json_decode($payload, true);
+        return json_decode($payload->raw_body, true);
     }
 }
 
