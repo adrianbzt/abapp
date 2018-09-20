@@ -128,7 +128,7 @@ class MiniDrawer extends React.Component {
                             <MenuIcon/>
                         </IconButton>
                         <Typography variant="title" color="inherit" noWrap>
-                            Tool-ul nostru jmeker
+                            Tool-ul nostru jmeker!
                         </Typography>
 
                         <UserIcon/>
