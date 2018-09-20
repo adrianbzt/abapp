@@ -14,6 +14,7 @@ import KeyboardArrowLeft from '@material-ui/icons/KeyboardArrowLeft';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import TableHead from "@material-ui/core/TableHead/TableHead";
+import {GeoChart} from "react-chartkick";
 
 const actionsStyles = theme => ({
     root: {
@@ -114,15 +115,13 @@ const styles = theme => ({
     tableWrapper: {
         overflowX: 'auto',
         overflowY: 'auto',
-        maxHeight: 500
+        maxHeight: 800
     },
 });
 
 class CustomPaginationActionsTable extends React.Component {
     state = {
-        rows: [
-
-        ],
+        rows: [],
         page: 0,
         rowsPerPage: 10,
     };
@@ -157,16 +156,26 @@ class CustomPaginationActionsTable extends React.Component {
             )
     }
 
+    makeMeCrazy() {
+        let countriesOverall = this.state.rows.slice(0, -1).map((obj, key) => {
+            const reducer = (accumulator, currentValue) => (accumulator + currentValue);
+            let country = obj[0];
+            let values = obj.slice(1).reduce(reducer);
+            return [country, values]
+        });
+
+        return countriesOverall;
+    }
+
     render() {
         const {classes} = this.props;
         const {rows, rowsPerPage, page} = this.state;
         const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
-        console.log(rows);
-
         return (
             <Paper className={classes.root}>
                 <div className={classes.tableWrapper}>
+                    <GeoChart data={(rows.length) > 0 ? this.makeMeCrazy() : []}/>
                     <Table className={classes.table}>
 
                         {rows.map((row, rowNb) => {
@@ -223,6 +232,7 @@ class CustomPaginationActionsTable extends React.Component {
                             </TableRow>
                         </TableFooter>
                     </Table>
+
                 </div>
             </Paper>
         );
@@ -234,3 +244,4 @@ CustomPaginationActionsTable.propTypes = {
 };
 
 export default withStyles(styles)(CustomPaginationActionsTable);
+
