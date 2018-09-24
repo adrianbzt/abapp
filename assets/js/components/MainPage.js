@@ -16,7 +16,8 @@ import {sections} from './SideBar/SideBarEntries';
 import Checkout from './Checkout';
 import UserIcon from './UpperBar/UserIcon';
 import PaperTable from './Widget/PaperTable';
-
+import {Provider} from 'react-redux';
+import store from './store';
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -109,6 +110,7 @@ class MiniDrawer extends React.Component {
         const {open} = this.state;
 
         return (
+            <Provider store={store}>
             <div className={classes.root}>
                 <AppBar
                     position="absolute"
@@ -167,6 +169,7 @@ class MiniDrawer extends React.Component {
 
                 </main>
             </div>
+            </Provider>
         )
             ;
     }

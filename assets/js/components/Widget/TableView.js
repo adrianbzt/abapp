@@ -14,6 +14,8 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import LastPageIcon from '@material-ui/icons/LastPage';
 import TableHead from "@material-ui/core/TableHead/TableHead";
 import {GeoChart} from "react-chartkick";
+import {connect} from 'react-redux';
+import {fetchPosts} from '../actions/postActions';
 
 const actionsStyles = theme => ({
     root: {
@@ -96,12 +98,6 @@ const TablePaginationActionsWrapped = withStyles(actionsStyles, {withTheme: true
 
 let counter = 0;
 
-function createData(values) {
-    let val = values.toString();
-    counter += 1;
-    return {id: counter, val};
-}
-
 const styles = theme => ({
     root: {
         width: '100%',
@@ -119,43 +115,12 @@ const styles = theme => ({
 });
 
 class CustomPaginationActionsTable extends React.Component {
-    state = {
-        rows: [],
-        page: 0,
-        rowsPerPage: 10,
-    };
-
-    handleChangePage = (event, page) => {
-        this.setState({page});
-    };
-
-    handleChangeRowsPerPage = event => {
-        this.setState({rowsPerPage: event.target.value});
-    };
-
-    componentDidMount() {
-        fetch("kpi")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    this.setState({
-                        rows: result,
-                    });
-                },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
-                (error) => {
-                    // this.setState({
-                    //     isLoaded: true,
-                    //     error
-                    // });
-                }
-            )
+    componentWillMount() {
+        this.props.fetchPosts();
     }
 
     makeMeCrazy() {
-        let countriesOverall = this.state.rows.slice(0, -1).map((obj, key) => {
+        let countriesOverall = this.props.posts.slice(0, -1).map((obj, key) => {
             const reducer = (accumulator, currentValue) => (accumulator + currentValue);
             let country = obj[0];
             let values = obj.slice(1).reduce(reducer);
@@ -167,18 +132,17 @@ class CustomPaginationActionsTable extends React.Component {
 
     render() {
         const {classes} = this.props;
-        const {rows, rowsPerPage, page} = this.state;
-        const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+        const emptyRows = 0;
 
         return (
             <Paper className={classes.root}>
-                <GeoChart data={(rows.length) > 0 ? this.makeMeCrazy() : []}/>
+                <GeoChart data={(this.props.posts.length) > 0 ? this.makeMeCrazy() : []}/>
                 
                 <div className={classes.tableWrapper}>
 
                     <Table className={classes.table}>
 
-                        {rows.map((row, rowNb) => {
+                        {this.props.posts.map((row, rowNb) => {
                             if (rowNb === 0) {
                                 return (
                                     <TableHead key="tableHead">
@@ -234,5 +198,8 @@ CustomPaginationActionsTable.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(CustomPaginationActionsTable);
+const mapStateToProps = state =>({
+    posts: state.posts.items
+})
+export default connect(mapStateToProps, {fetchPosts})(withStyles(styles)(CustomPaginationActionsTable));
 

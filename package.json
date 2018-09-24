@@ -16,6 +16,8 @@
     "react-chartkick": "^0.3.0",
     "react-dom": "^16.5.1",
     "react-gridstack": "^0.1.4",
-    "redux": "^4.0.0"
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
   }
 }
