@@ -1,5 +1,4 @@
 import React from 'react';
-import Typography from "@material-ui/core/Typography/Typography";
 import ButtonJmeker from './ButtonJmeker';
 
 class Checkout extends React.Component {
