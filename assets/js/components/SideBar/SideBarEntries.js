@@ -7,7 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import PollRoundedIcon from '@material-ui/icons/PollRounded';
 import CloudCircleIcon from '@material-ui/icons/CloudCircle';
 
-export const mailFolderListItems = (
+export const sections = (
     <div>
         <ListItem button>
             <ListItemIcon>
@@ -21,11 +21,5 @@ export const mailFolderListItems = (
             </ListItemIcon>
             <ListItemText primary="Run" />
         </ListItem>
-    </div>
-);
-
-export const otherMailFolderListItems = (
-    <div>
-
     </div>
 );

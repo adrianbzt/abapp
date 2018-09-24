@@ -12,12 +12,10 @@ import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import {mailFolderListItems, otherMailFolderListItems} from './tileData';
+import {sections} from './SideBar/SideBarEntries';
 import Checkout from './Checkout';
-import UserIcon from './UserIcon';
-
-import PaperEmpty from './PaperEmpty';
-import PaperTable from './PaperTable';
+import UserIcon from './UpperBar/UserIcon';
+import PaperTable from './Widget/PaperTable';
 
 const drawerWidth = 240;
 
@@ -133,7 +131,6 @@ class MiniDrawer extends React.Component {
 
                         <UserIcon/>
                     </Toolbar>
-
                 </AppBar>
                 < Drawer
                     variant="permanent"
@@ -159,7 +156,7 @@ class MiniDrawer extends React.Component {
                         </IconButton>
                     </div>
                     <Divider/>
-                    < List> {mailFolderListItems}
+                    < List> {sections}
                     </List>
 
                 </Drawer>

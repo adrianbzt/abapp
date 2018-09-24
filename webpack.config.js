@@ -22,7 +22,7 @@ Encore
     //.addEntry('page2', './assets/js/page2.js')
 
     // will output as web/build/app.js
-    .addEntry('babel', ["babel-polyfill", './assets/js/components/AppBar.js'])
+    .addEntry('babel', ["babel-polyfill", './assets/js/components/MainPage.js'])
 
     /*
      * FEATURE CONFIG

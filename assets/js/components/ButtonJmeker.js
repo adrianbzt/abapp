@@ -17,7 +17,7 @@ function ContainedButtons(props) {
     return (
         <div>
             <Button variant="contained" className={classes.button} onClick={() => clickMe()}>
-                Click Me!
+                Run Request
             </Button>
         </div>
     );

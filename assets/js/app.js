@@ -13,7 +13,6 @@ require('../css/app.css');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Grid from './components/Grid';
 import MainPage from './components/MainPage';
 
 
@@ -25,11 +24,6 @@ if (checkout) {
             <MainPage/>
             </div>,
             checkout
-            // <div>
-            //
-            //     <Checkout {...(checkout.dataset)}/>,
-            //     checkout
-            // </div>
         );
     } catch (error) {
         console.error(error);

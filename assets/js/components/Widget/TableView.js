@@ -5,7 +5,6 @@ import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableFooter from '@material-ui/core/TableFooter';
-import TablePagination from '@material-ui/core/TablePagination';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
@@ -135,12 +134,10 @@ class CustomPaginationActionsTable extends React.Component {
     };
 
     componentDidMount() {
-        // fetch("https://fbstat.mdc.gameloft.org/Odd/Api/Aria/gmd_beta.php?game=1036&kpi=2&zoom=daily&ua_options=&chart=table&platform=0&group_option=&start_date=2018-07-17&end_date=2018-07-30&country=&action=get_kpi_data")
         fetch("kpi")
             .then(res => res.json())
             .then(
                 (result) => {
-                    // console.log(result)
                     this.setState({
                         rows: result,
                     });
@@ -223,15 +220,6 @@ class CustomPaginationActionsTable extends React.Component {
 
                         <TableFooter>
                             <TableRow>
-                                {/*<TablePagination*/}
-                                {/*colSpan={3}*/}
-                                {/*count={rows.length}*/}
-                                {/*rowsPerPage={rowsPerPage}*/}
-                                {/*page={page}*/}
-                                {/*onChangePage={this.handleChangePage}*/}
-                                {/*onChangeRowsPerPage={this.handleChangeRowsPerPage}*/}
-                                {/*ActionsComponent={TablePaginationActionsWrapped}*/}
-                                {/*/>*/}
                             </TableRow>
                         </TableFooter>
                     </Table>
