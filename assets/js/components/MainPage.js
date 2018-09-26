@@ -18,8 +18,10 @@ import UserIcon from './UpperBar/UserIcon';
 import PaperTable from './Widget/PaperTable';
 import {Provider} from 'react-redux';
 import store from './store';
-const drawerWidth = 240;
+import ButtonJmeker from './ButtonJmeker';
+import ButtonJmekerDoi from './ButtonJmekerDoi';
 
+const drawerWidth = 240;
 const styles = theme => ({
     root: {
         flexGrow: 1,
@@ -93,7 +95,7 @@ const styles = theme => ({
 
 class MiniDrawer extends React.Component {
     state = {
-        open: false,
+        components: ['<ButtonJmeker/>', '<ButtonJmekerDoi/>'],
     };
 
     handleDrawerOpen = () => {
@@ -164,8 +166,14 @@ class MiniDrawer extends React.Component {
                 </Drawer>
                 <main className={classes.content}>
                     <div className={classes.toolbar}/>
-                    <Checkout/>
-                    <PaperTable/>
+
+                    {this.state.components.map(obj => {
+                                                <Checkout/>
+
+                    })}
+
+                    {/*<ButtonJmeker/>*/}
+                    {/*<PaperTable/>*/}
 
                 </main>
             </div>

@@ -9,13 +9,13 @@ import CloudCircleIcon from '@material-ui/icons/CloudCircle';
 
 export const sections = (
     <div>
-        <ListItem button>
+        <ListItem button onClick={function() { console.log('yes')}}>
             <ListItemIcon>
                 <PollRoundedIcon />
             </ListItemIcon>
-            <ListItemText primary="Dashboard" />
+            <ListItemText primary="Dashboard"  />
         </ListItem>
-        <ListItem button>
+        <ListItem button onClick={function() { console.log('no')}}>
             <ListItemIcon>
                 <CloudCircleIcon />
             </ListItemIcon>
